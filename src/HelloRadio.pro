@@ -19,8 +19,8 @@ FORMS += \
     mainwidget.ui
 
 wasm {
-    INCLUDEPATH += D:\ems\emsdk\upstream\emscripten\cache\sysroot\include
-    DEPENDPATH += D:\ems\emsdk\upstream\emscripten\cache\sysroot\include
+    INCLUDEPATH += emscripten\cache\sysroot\include
+    DEPENDPATH += emscripten\cache\sysroot\include
 }
 
 RESOURCES += \
