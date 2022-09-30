@@ -26,7 +26,7 @@ private:
 
     StreamPlayerJs * m_streamPlayerJs = nullptr;
 
-    std::array<QPushButton*, 9> m_stationButtons = { nullptr };
+    std::array<QPushButton*, 15> m_stationButtons = { nullptr };
 
     bool m_nowPlaying = false;
 

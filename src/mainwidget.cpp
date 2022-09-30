@@ -4,20 +4,7 @@
 #include <QMessageBox>
 
 #include "streamplayerjs.h"
-
-#include <array>
-
-static const std::array stations {
-    std::pair {"Megaton Cafe Radio", "http://us2.internet-radio.com:8443/stream"},
-    std::pair {"Radio Estilo Leblon", "http://us4.internet-radio.com:8193/stream"},
-    std::pair {"Motown Magic Oldies", "http://airspectrum.cdnstream1.com:8024/1302_192"},
-    std::pair {"Venice Classic Radio Auditorium", "http://116.202.241.212:8010/stream"},
-    std::pair {"Angel Radio", "http://94.75.227.133:7030/stream"},
-    std::pair {"Dance UK Radio", "http://uk2.internet-radio.com:8024/stream"},
-    std::pair {"Jazz Central", "http://149.255.59.3:8027/stream"},
-    std::pair {"Urban Radio", "http://us1.internet-radio.com:8242/stream"},
-    std::pair {"Italy Classical Radio", "http://philae.shoutca.st:8204/stream"}
-};
+#include "stations.h"
 
 MainWidget::MainWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MainWidget) {
 
@@ -31,12 +18,13 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MainWidget
 
     m_stationButtons = {
         ui->num1PB, ui->num2PB, ui->num3PB, ui->num4PB, ui->num5PB, ui->num6PB,
-        ui->num7PB, ui->num8PB, ui->num9PB
+        ui->num7PB, ui->num8PB, ui->num9PB, ui->num10PB, ui->num11PB, ui->num12PB,
+        ui->num13PB, ui->num14PB, ui->num15PB
     };
 
     for (size_t i=0; i<stations.size(); ++i) {
-        m_stationButtons[i]->setText(stations[i].first);
-        m_stationButtons[i]->setToolTip(stations[i].second);
+        m_stationButtons[i]->setText(std::get<0>(stations[i]));
+        m_stationButtons[i]->setToolTip(std::get<1>(stations[i]));
     }
 
     ui->playPB->setIconSize({96,96});

@@ -1,10 +1,10 @@
 <RCC>
-    <qresource prefix="/visual">
-        <file>stylesheet.qss</file>
-        <file>play-button.svg</file>
-        <file>console.svg</file>
-        <file>information.svg</file>
-        <file>js-script.svg</file>
-        <file>run-script.svg</file>
+    <qresource prefix="/">
+        <file>resources/play-button.svg</file>
+        <file>resources/console.svg</file>
+        <file>resources/information.svg</file>
+        <file>resources/run-script.svg</file>
+        <file>resources/favicon.ico</file>
+        <file>resources/applogo.svg</file>
     </qresource>
 </RCC>

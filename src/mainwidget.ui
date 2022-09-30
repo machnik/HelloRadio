@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>815</width>
-    <height>641</height>
+    <width>837</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="font">
@@ -79,7 +79,7 @@
            <item>
             <widget class="QLabel" name="volumeL">
              <property name="text">
-              <string>VOL</string>
+              <string>Głośność:</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -147,12 +147,25 @@
            </property>
            <property name="icon">
             <iconset resource="resources.qrc">
-             <normaloff>:/visual/play-button.svg</normaloff>:/visual/play-button.svg</iconset>
+             <normaloff>:/resources/play-button.svg</normaloff>:/resources/play-button.svg</iconset>
            </property>
            <property name="checkable">
             <bool>true</bool>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
           <spacer name="verticalSpacer_2">
@@ -179,11 +192,11 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>Console</string>
+            <string>Konsola</string>
            </property>
            <property name="icon">
             <iconset resource="resources.qrc">
-             <normaloff>:/visual/console.svg</normaloff>:/visual/console.svg</iconset>
+             <normaloff>:/resources/console.svg</normaloff>:/resources/console.svg</iconset>
            </property>
            <property name="checkable">
             <bool>true</bool>
@@ -205,11 +218,11 @@
             </sizepolicy>
            </property>
            <property name="text">
-            <string>About Qt</string>
+            <string>Informacje o Qt</string>
            </property>
            <property name="icon">
             <iconset resource="resources.qrc">
-             <normaloff>:/visual/information.svg</normaloff>:/visual/information.svg</iconset>
+             <normaloff>:/resources/information.svg</normaloff>:/resources/information.svg</iconset>
            </property>
            <property name="checkable">
             <bool>false</bool>
@@ -232,7 +245,16 @@
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
+          <item row="0" column="1" colspan="2">
+           <widget class="QComboBox" name="comboBox">
+            <item>
+             <property name="text">
+              <string>Główna</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
            <widget class="QPushButton" name="num1PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -247,14 +269,14 @@
              <bool>true</bool>
             </property>
             <property name="checked">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
             <property name="autoExclusive">
              <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="1" column="1">
            <widget class="QPushButton" name="num2PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -273,7 +295,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="1" column="2">
            <widget class="QPushButton" name="num3PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -292,7 +314,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="2" column="0">
            <widget class="QPushButton" name="num4PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -311,7 +333,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="2" column="1">
            <widget class="QPushButton" name="num5PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -330,7 +352,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="2" column="2">
            <widget class="QPushButton" name="num6PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -387,7 +409,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="3" column="2">
            <widget class="QPushButton" name="num9PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -406,8 +428,8 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
-           <widget class="QPushButton" name="otherPB">
+          <item row="4" column="0">
+           <widget class="QPushButton" name="num10PB">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
               <horstretch>0</horstretch>
@@ -415,7 +437,121 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>...</string>
+             <string>10</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QPushButton" name="num11PB">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>11</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QPushButton" name="num12PB">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>12</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QPushButton" name="num13PB">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>13</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QPushButton" name="num14PB">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>14</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QPushButton" name="num15PB">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>15</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="autoExclusive">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QPushButton" name="otherPB">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Własny URL</string>
             </property>
             <property name="checkable">
              <bool>true</bool>
@@ -428,7 +564,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0" colspan="2">
+          <item row="6" column="1" colspan="2">
            <widget class="QLineEdit" name="urlLE">
             <property name="enabled">
              <bool>false</bool>
@@ -444,6 +580,16 @@
             </property>
             <property name="readOnly">
              <bool>false</bool>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="javaScriptL_2">
+            <property name="text">
+             <string>Lista stacji:</string>
             </property>
            </widget>
           </item>
@@ -474,7 +620,7 @@
         <item>
          <widget class="QLabel" name="javaScriptL">
           <property name="text">
-           <string>JavaScript Console</string>
+           <string>JavaScript</string>
           </property>
          </widget>
         </item>
@@ -497,11 +643,11 @@
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>RUN</string>
+           <string>Uruchom</string>
           </property>
           <property name="icon">
            <iconset resource="resources.qrc">
-            <normaloff>:/visual/run-script.svg</normaloff>:/visual/run-script.svg</iconset>
+            <normaloff>:/resources/run-script.svg</normaloff>:/resources/run-script.svg</iconset>
           </property>
          </widget>
         </item>
@@ -541,8 +687,8 @@
    <slot>runJavaScript()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>723</x>
-     <y>305</y>
+     <x>834</x>
+     <y>478</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
@@ -573,8 +719,8 @@
    <slot>play()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>150</x>
-     <y>183</y>
+     <x>144</x>
+     <y>308</y>
     </hint>
     <hint type="destinationlabel">
      <x>8</x>
@@ -605,8 +751,8 @@
    <slot>urlChanged(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>714</x>
-     <y>242</y>
+     <x>825</x>
+     <y>408</y>
     </hint>
     <hint type="destinationlabel">
      <x>703</x>
@@ -621,8 +767,8 @@
    <slot>toggleJsConsole()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>150</x>
-     <y>220</y>
+     <x>144</x>
+     <y>373</y>
     </hint>
     <hint type="destinationlabel">
      <x>834</x>
@@ -637,8 +783,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>319</x>
-     <y>34</y>
+     <x>384</x>
+     <y>100</y>
     </hint>
     <hint type="destinationlabel">
      <x>628</x>
@@ -653,28 +799,12 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>673</x>
-     <y>41</y>
+     <x>605</x>
+     <y>107</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
      <y>27</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>num3PB</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWidget</receiver>
-   <slot>setPresetStation()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>364</x>
-     <y>79</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>740</x>
-     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -685,8 +815,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>602</x>
-     <y>77</y>
+     <x>384</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -701,8 +831,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>375</x>
-     <y>120</y>
+     <x>605</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -717,8 +847,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>554</x>
-     <y>111</y>
+     <x>825</x>
+     <y>185</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -733,8 +863,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>365</x>
-     <y>160</y>
+     <x>384</x>
+     <y>247</y>
     </hint>
     <hint type="destinationlabel">
      <x>738</x>
@@ -749,8 +879,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>495</x>
-     <y>161</y>
+     <x>605</x>
+     <y>247</y>
     </hint>
     <hint type="destinationlabel">
      <x>739</x>
@@ -765,8 +895,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>295</x>
-     <y>194</y>
+     <x>825</x>
+     <y>247</y>
     </hint>
     <hint type="destinationlabel">
      <x>740</x>
@@ -781,8 +911,8 @@
    <slot>setCustomStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>578</x>
-     <y>193</y>
+     <x>384</x>
+     <y>410</y>
     </hint>
     <hint type="destinationlabel">
      <x>738</x>
@@ -797,12 +927,124 @@
    <slot>aboutQtInfo()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>91</x>
-     <y>244</y>
+     <x>120</x>
+     <y>410</y>
     </hint>
     <hint type="destinationlabel">
      <x>5</x>
      <y>297</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num3PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>825</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>740</x>
+     <y>92</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num10PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>850</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num11PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>515</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>852</x>
+     <y>289</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num13PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>850</x>
+     <y>371</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num12PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>662</x>
+     <y>278</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>848</x>
+     <y>428</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num14PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>470</x>
+     <y>356</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>848</x>
+     <y>492</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num15PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>633</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>854</x>
+     <y>554</y>
     </hint>
    </hints>
   </connection>

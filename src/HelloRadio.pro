@@ -13,14 +13,15 @@ HEADERS += \
     javascript.h \
     mainwidget.h \
     player.h \
+    stations.h \
     streamplayerjs.h
 
 FORMS += \
     mainwidget.ui
 
 wasm {
-    INCLUDEPATH += emscripten\cache\sysroot\include
-    DEPENDPATH += emscripten\cache\sysroot\include
+    INCLUDEPATH += D:\ems\emsdk\upstream\emscripten\cache\sysroot\include
+    DEPENDPATH += D:\ems\emsdk\upstream\emscripten\cache\sysroot\include
 }
 
 RESOURCES += \
