@@ -2,6 +2,7 @@
 #include "ui_mainwidget.h"
 
 #include <QMessageBox>
+#include <QStyleFactory>
 
 #include "streamplayerjs.h"
 #include "stations.h"
@@ -110,5 +111,12 @@ void MainWidget::setCustomStation() {
 void MainWidget::aboutQtInfo() {
 
     QMessageBox::aboutQt(this);
+}
+
+void MainWidget::setUIStyle() {
+
+    QApplication::setStyle(
+        QStyleFactory::create(
+            ui->fusionRB->isChecked() ? "Fusion" : "Windows"));
 }
 

@@ -40,5 +40,6 @@ private slots:
     void setPresetStation();
     void setCustomStation();
     void aboutQtInfo();
+    void setUIStyle();
 };
 #endif // MAINWIDGET_H

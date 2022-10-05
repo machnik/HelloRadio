@@ -16,7 +16,9 @@ public:
     virtual void setVolume(int volume, bool immediately = true) override;
 
 private:
+
     JavaScript & m_js;
+    bool m_initialized = false;
 };
 
 #endif // STREAMPLAYERJS_H
