@@ -32,7 +32,8 @@ MainWidget::MainWidget(QWidget *parent)
     }
 
     ui->playPB->setIconSize({96,96});
-    ui->bitrateLCD->display("---");
+
+    m_stationButtons[0]->click();
 }
 
 MainWidget::~MainWidget() {
