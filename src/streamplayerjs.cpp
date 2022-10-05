@@ -2,11 +2,7 @@
 
 StreamPlayerJs::StreamPlayerJs(QObject *parent, JavaScript & js) : Player{parent}, m_js{js} {
 
-}
-
-void StreamPlayerJs::playPause() {
-
-    auto code = QString {                                                       "\
+    m_js.run(                                                                   "\
         var AudioContext = window.AudioContext || window.webkitAudioContext;     \
         const context = new AudioContext();                                      \
                                                                                  \
@@ -28,7 +24,12 @@ void StreamPlayerJs::playPause() {
                                                                                  \
         globalThis.audio.addEventListener('canplaythrough', playHandler, false); \
         globalThis.audio.addEventListener('error', errorHandler);                \
-                                                                                 \
+    ");
+}
+
+void StreamPlayerJs::playPause() {
+
+    auto code = QString {                                                       "\
         globalThis.audio.src = '%1';                                             \
         globalThis.audio.volume = '%2';                                          \
         globalThis.audio.play();                                                 \
