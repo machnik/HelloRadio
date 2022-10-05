@@ -11,9 +11,9 @@ class StreamPlayerJs : public Player {
 public:
     explicit StreamPlayerJs(QObject *parent, JavaScript & js);
 
-    virtual void playPause();
-    virtual void stop();
-    virtual void setVolume(int volume);
+    virtual void playPause() override;
+    virtual void stop() override;
+    virtual void setVolume(int volume, bool immediately = true) override;
 
 private:
     JavaScript & m_js;

@@ -1,6 +1,8 @@
 #include "streamplayerjs.h"
 
-StreamPlayerJs::StreamPlayerJs(QObject *parent, JavaScript & js) : Player{parent}, m_js{js} {}
+StreamPlayerJs::StreamPlayerJs(QObject *parent, JavaScript & js) : Player{parent}, m_js{js} {
+
+}
 
 void StreamPlayerJs::playPause() {
 
@@ -39,7 +41,8 @@ void StreamPlayerJs::stop() {
     m_js.run("globalThis.audio.pause()");
 }
 
-void StreamPlayerJs::setVolume(int volume) {
+void StreamPlayerJs::setVolume(int volume, bool immediately) {
     m_volume = volume;
-    m_js.run(QString {"globalThis.audio.volume = "} + QString::number(volume/100.) + ";");
+    if (immediately)
+            m_js.run(QString {"globalThis.audio.volume = "} + QString::number(volume/100.) + ";");
 }

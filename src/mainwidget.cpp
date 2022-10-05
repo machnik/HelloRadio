@@ -6,9 +6,17 @@
 #include "streamplayerjs.h"
 #include "stations.h"
 
-MainWidget::MainWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MainWidget) {
+MainWidget::MainWidget(QWidget *parent)
+    : QWidget(parent), ui(new Ui::MainWidget)
+{
 
     ui->setupUi(this);
+
+    m_stationButtons = {
+        ui->num1PB, ui->num2PB, ui->num3PB, ui->num4PB, ui->num5PB,
+        ui->num6PB, ui->num7PB, ui->num8PB, ui->num9PB, ui->num10PB,
+        ui->num11PB, ui->num12PB, ui->num13PB, ui->num14PB, ui->num15PB
+    };
 
     ui->jsConsoleGB->setVisible(ui->jsConsolePB->isChecked());
 
@@ -16,18 +24,15 @@ MainWidget::MainWidget(QWidget *parent) : QWidget(parent), ui(new Ui::MainWidget
 
     m_streamPlayerJs = new StreamPlayerJs{this, m_js};
 
-    m_stationButtons = {
-        ui->num1PB, ui->num2PB, ui->num3PB, ui->num4PB, ui->num5PB, ui->num6PB,
-        ui->num7PB, ui->num8PB, ui->num9PB, ui->num10PB, ui->num11PB, ui->num12PB,
-        ui->num13PB, ui->num14PB, ui->num15PB
-    };
+    int i = 0;
 
-    for (size_t i=0; i<stations.size(); ++i) {
-        m_stationButtons[i]->setText(std::get<0>(stations[i]));
-        m_stationButtons[i]->setToolTip(std::get<1>(stations[i]));
+    for (const auto & station : stations) {
+        m_stationButtons[i]->setText(station.first);
+        m_stationButtons[i++]->setToolTip(QString{"URL: "} + std::get<0>(station.second));
     }
 
     ui->playPB->setIconSize({96,96});
+    ui->bitrateLCD->display("---");
 }
 
 MainWidget::~MainWidget() {
@@ -48,8 +53,8 @@ void MainWidget::play() {
 }
 
 void MainWidget::volume(int value) {
-    m_streamPlayerJs->setVolume(value);
     ui->volumeLCD->display(value);
+    m_streamPlayerJs->setVolume(value, m_nowPlaying);
 }
 
 void MainWidget::urlChanged(QString url) {
@@ -72,12 +77,12 @@ void MainWidget::setPresetStation() {
 
     ui->urlLE->setEnabled(false);
 
-    for (const auto button : m_stationButtons) {
+    for (auto button : m_stationButtons) {
         if (button->isChecked()) {
 
-            const QString & url { button->toolTip() };
-
-            ui->urlLE->setText(url);
+            ui->urlLE->setText(std::get<0>(stations[button->text()]));
+            ui->encTE->setText(std::get<1>(stations[button->text()]));
+            ui->bitrateLCD->display(std::get<2>(stations[button->text()]));
 
             if (m_nowPlaying) {
                 m_streamPlayerJs->stop();
@@ -90,6 +95,9 @@ void MainWidget::setPresetStation() {
 }
 
 void MainWidget::setCustomStation() {
+
+    ui->encTE->setText("---");
+    ui->bitrateLCD->display("---");
 
     ui->urlLE->setEnabled(true);
 

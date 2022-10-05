@@ -14,7 +14,7 @@ public:
 
     virtual void playPause() = 0;
     virtual void stop() = 0;
-    virtual void setVolume(int volume) = 0;
+    virtual void setVolume(int volume, bool immediately) = 0;
 
 protected:
     QString m_source;

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>837</width>
-    <height>539</height>
+    <width>980</width>
+    <height>632</height>
    </rect>
   </property>
   <property name="font">
@@ -21,13 +21,17 @@
   <property name="windowTitle">
    <string>HelloRadio</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/resources/favicon.ico</normaloff>:/resources/favicon.ico</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
       <string/>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QGroupBox" name="groupBox">
         <property name="sizePolicy">
@@ -41,42 +45,42 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QDial" name="volumeD">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>108</width>
-             <height>108</height>
-            </size>
-           </property>
-           <property name="maximum">
-            <number>100</number>
-           </property>
-           <property name="sliderPosition">
-            <number>80</number>
-           </property>
-           <property name="invertedAppearance">
-            <bool>false</bool>
-           </property>
-           <property name="invertedControls">
-            <bool>false</bool>
-           </property>
-           <property name="wrapping">
-            <bool>false</bool>
-           </property>
-           <property name="notchesVisible">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_5">
-           <item>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0" rowspan="2">
+            <widget class="QDial" name="volumeD">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>108</width>
+               <height>108</height>
+              </size>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="sliderPosition">
+              <number>80</number>
+             </property>
+             <property name="invertedAppearance">
+              <bool>false</bool>
+             </property>
+             <property name="invertedControls">
+              <bool>false</bool>
+             </property>
+             <property name="wrapping">
+              <bool>false</bool>
+             </property>
+             <property name="notchesVisible">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
             <widget class="QLabel" name="volumeL">
              <property name="text">
               <string>Głośność:</string>
@@ -86,8 +90,14 @@
              </property>
             </widget>
            </item>
-           <item>
+           <item row="1" column="1">
             <widget class="QLCDNumber" name="volumeLCD">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Consolas</family>
@@ -116,7 +126,105 @@
           </layout>
          </item>
          <item>
-          <spacer name="verticalSpacer">
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="4">
+            <widget class="QLCDNumber" name="bitrateLCD">
+             <property name="minimumSize">
+              <size>
+               <width>60</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::WinPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
+             </property>
+             <property name="midLineWidth">
+              <number>0</number>
+             </property>
+             <property name="digitCount">
+              <number>3</number>
+             </property>
+             <property name="segmentStyle">
+              <enum>QLCDNumber::Flat</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLabel" name="bitrateL">
+             <property name="text">
+              <string>Kbit/s:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="encTE">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>60</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Century Gothic</family>
+               <pointsize>14</pointsize>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>---</string>
+             </property>
+             <property name="maxLength">
+              <number>4</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="placeholderText">
+              <string>---</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="encL">
+             <property name="text">
+              <string>Kodek:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
            </property>
@@ -153,19 +261,6 @@
             <bool>true</bool>
            </property>
           </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
          </item>
          <item>
           <spacer name="verticalSpacer_2">
@@ -236,15 +331,28 @@
        </widget>
       </item>
       <item>
-       <widget class="QSplitter" name="splitter_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QTabWidget" name="mainTabWidget">
+        <property name="tabPosition">
+         <enum>QTabWidget::North</enum>
         </property>
-        <widget class="QGroupBox" name="groupBox_3">
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <property name="elideMode">
+         <enum>Qt::ElideNone</enum>
+        </property>
+        <widget class="QWidget" name="radioTab">
+         <attribute name="title">
+          <string>Radio</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="javaScriptL_2">
+            <property name="text">
+             <string>Lista stacji:</string>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="1" colspan="2">
            <widget class="QComboBox" name="comboBox">
             <item>
@@ -576,20 +684,13 @@
              </sizepolicy>
             </property>
             <property name="text">
-             <string>http://us2.internet-radio.com:8443/stream</string>
+             <string>https://rs6-krk2.rmfstream.pl/RMFFM48</string>
             </property>
             <property name="readOnly">
              <bool>false</bool>
             </property>
             <property name="clearButtonEnabled">
              <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="javaScriptL_2">
-            <property name="text">
-             <string>Lista stacji:</string>
             </property>
            </widget>
           </item>
@@ -667,7 +768,7 @@
          <bool>false</bool>
         </property>
         <property name="plainText">
-         <string>alert('hello world');</string>
+         <string>alert('hello radio');</string>
         </property>
        </widget>
       </item>
@@ -687,7 +788,7 @@
    <slot>runJavaScript()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>834</x>
+     <x>770</x>
      <y>478</y>
     </hint>
     <hint type="destinationlabel">
@@ -751,8 +852,8 @@
    <slot>urlChanged(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>825</x>
-     <y>408</y>
+     <x>758</x>
+     <y>405</y>
     </hint>
     <hint type="destinationlabel">
      <x>703</x>
@@ -771,7 +872,7 @@
      <y>373</y>
     </hint>
     <hint type="destinationlabel">
-     <x>834</x>
+     <x>790</x>
      <y>133</y>
     </hint>
    </hints>
@@ -847,8 +948,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>825</x>
-     <y>185</y>
+     <x>758</x>
+     <y>200</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -895,8 +996,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>825</x>
-     <y>247</y>
+     <x>758</x>
+     <y>257</y>
     </hint>
     <hint type="destinationlabel">
      <x>740</x>
@@ -911,8 +1012,8 @@
    <slot>setCustomStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>384</x>
-     <y>410</y>
+     <x>475</x>
+     <y>407</y>
     </hint>
     <hint type="destinationlabel">
      <x>738</x>
@@ -943,8 +1044,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>825</x>
-     <y>122</y>
+     <x>758</x>
+     <y>144</y>
     </hint>
     <hint type="destinationlabel">
      <x>740</x>
@@ -959,11 +1060,11 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>293</x>
-     <y>279</y>
+     <x>475</x>
+     <y>313</y>
     </hint>
     <hint type="destinationlabel">
-     <x>850</x>
+     <x>790</x>
      <y>239</y>
     </hint>
    </hints>
@@ -979,7 +1080,7 @@
      <y>281</y>
     </hint>
     <hint type="destinationlabel">
-     <x>852</x>
+     <x>790</x>
      <y>289</y>
     </hint>
    </hints>
@@ -991,11 +1092,11 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>293</x>
-     <y>328</y>
+     <x>475</x>
+     <y>370</y>
     </hint>
     <hint type="destinationlabel">
-     <x>850</x>
+     <x>790</x>
      <y>371</y>
     </hint>
    </hints>
@@ -1011,7 +1112,7 @@
      <y>278</y>
     </hint>
     <hint type="destinationlabel">
-     <x>848</x>
+     <x>790</x>
      <y>428</y>
     </hint>
    </hints>
@@ -1023,11 +1124,11 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>470</x>
-     <y>356</y>
+     <x>616</x>
+     <y>370</y>
     </hint>
     <hint type="destinationlabel">
-     <x>848</x>
+     <x>790</x>
      <y>492</y>
     </hint>
    </hints>
@@ -1043,7 +1144,7 @@
      <y>331</y>
     </hint>
     <hint type="destinationlabel">
-     <x>854</x>
+     <x>790</x>
      <y>554</y>
     </hint>
    </hints>
