@@ -32,9 +32,9 @@ MainWidget::MainWidget(QWidget *parent)
         m_stationButtons[i++]->setToolTip(QString{"URL: "} + std::get<0>(station.second));
     }
 
-    ui->playPB->setIconSize({96,96});
-
     m_stationButtons[0]->click();
+
+    setPlatform();
 }
 
 MainWidget::~MainWidget() {
@@ -98,14 +98,15 @@ void MainWidget::setPresetStation() {
 
 void MainWidget::setCustomStation() {
 
+    ui->urlLE->setEnabled(true);
+
     ui->encTE->setText("---");
     ui->bitrateLCD->display("---");
 
-    ui->urlLE->setEnabled(true);
-
-    if (m_nowPlaying) m_streamPlayerJs->stop();
-
-    ui->playPB->setChecked(false);
+    if (m_nowPlaying) {
+        m_streamPlayerJs->stop();
+        play();
+    }
 }
 
 void MainWidget::aboutQtInfo() {
@@ -117,6 +118,23 @@ void MainWidget::setUIStyle() {
 
     QApplication::setStyle(
         QStyleFactory::create(
-            ui->fusionRB->isChecked() ? "Fusion" : "Windows"));
+                    ui->fusionRB->isChecked() ? "Fusion" : "Windows"));
+}
+
+void MainWidget::setPlatform() {
+
+    int iconSize {96};
+
+    if (ui->pcPB->isChecked()) {
+        setStyleSheet("QWidget {font-size: 16px};");
+    }
+    else {
+        setStyleSheet("QWidget {font-size: 10px};");
+        iconSize = 48;
+    }
+
+    ui->playPB->setIconSize({iconSize, iconSize});
+    ui->pcPB->setIconSize({iconSize, iconSize});
+    ui->phonePB->setIconSize({iconSize, iconSize});
 }
 

@@ -41,5 +41,6 @@ private slots:
     void setCustomStation();
     void aboutQtInfo();
     void setUIStyle();
+    void setPlatform();
 };
 #endif // MAINWIDGET_H

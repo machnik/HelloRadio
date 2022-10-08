@@ -6,5 +6,7 @@
         <file>resources/run-script.svg</file>
         <file>resources/favicon.ico</file>
         <file>resources/applogo.svg</file>
+        <file>resources/monitor.svg</file>
+        <file>resources/phone.svg</file>
     </qresource>
 </RCC>
