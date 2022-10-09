@@ -129,12 +129,12 @@ void MainWidget::setPlatform() {
         setStyleSheet("QWidget {font-size: 16px};");
     }
     else {
-        setStyleSheet("QWidget {font-size: 10px};");
+        setStyleSheet("QWidget {font-size: 12px};");
         iconSize = 48;
     }
 
     ui->playPB->setIconSize({iconSize, iconSize});
-    ui->pcPB->setIconSize({iconSize, iconSize});
-    ui->phonePB->setIconSize({iconSize, iconSize});
+    ui->pcPB->setIconSize({iconSize, iconSize/2});
+    ui->phonePB->setIconSize({iconSize, iconSize/2});
 }
 
