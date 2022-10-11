@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>637</width>
-    <height>900</height>
+    <width>633</width>
+    <height>868</height>
    </rect>
   </property>
   <property name="font">
@@ -311,7 +311,7 @@
              <bool>true</bool>
             </property>
             <property name="checked">
-             <bool>true</bool>
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -461,26 +461,6 @@
           </attribute>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
-             <item>
-              <widget class="QLabel" name="javaScriptL_2">
-               <property name="text">
-                <string>Lista stacji:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QComboBox" name="comboBox">
-               <item>
-                <property name="text">
-                 <string>Główna</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
             <widget class="QScrollArea" name="scrollArea">
              <property name="widgetResizable">
               <bool>true</bool>
@@ -490,40 +470,221 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>340</width>
-                <height>668</height>
+                <width>353</width>
+                <height>597</height>
                </rect>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_4">
-               <item>
-                <widget class="QPushButton" name="otherPB">
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="5" column="1">
+                <widget class="QPushButton" name="num10PB">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>50</height>
-                  </size>
-                 </property>
                  <property name="text">
-                  <string>Własny URL</string>
+                  <string>10</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
-                 </property>
-                 <property name="checked">
-                  <bool>false</bool>
                  </property>
                  <property name="autoExclusive">
                   <bool>true</bool>
                  </property>
                 </widget>
                </item>
-               <item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="num5PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>5</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1">
+                <widget class="QPushButton" name="num18PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>18</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QPushButton" name="num13PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>13</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QPushButton" name="num8PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="1">
+                <widget class="QPushButton" name="num2PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QPushButton" name="num11PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>11</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <widget class="QPushButton" name="num17PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>17</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <widget class="QPushButton" name="num12PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>12</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1">
+                <widget class="QPushButton" name="num14PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>14</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="1">
+                <widget class="QPushButton" name="num16PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
                 <widget class="QPushButton" name="num1PB">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -545,45 +706,35 @@
                  </property>
                 </widget>
                </item>
-               <item>
-                <widget class="QPushButton" name="num2PB">
+               <item row="0" column="0" colspan="2">
+                <widget class="QPushButton" name="otherPB">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="text">
-                  <string>2</string>
+                  <string>Własny URL</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                  <bool>false</bool>
                  </property>
                  <property name="autoExclusive">
                   <bool>true</bool>
                  </property>
                 </widget>
                </item>
-               <item>
-                <widget class="QPushButton" name="num3PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>3</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
+               <item row="2" column="1">
                 <widget class="QPushButton" name="num4PB">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -602,83 +753,7 @@
                  </property>
                 </widget>
                </item>
-               <item>
-                <widget class="QPushButton" name="num5PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>5</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="num6PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>6</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="num7PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>7</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="num8PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>8</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
+               <item row="5" column="0">
                 <widget class="QPushButton" name="num9PB">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -697,83 +772,7 @@
                  </property>
                 </widget>
                </item>
-               <item>
-                <widget class="QPushButton" name="num10PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>10</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="num11PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>11</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="num12PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>12</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="num14PB">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="text">
-                  <string>14</string>
-                 </property>
-                 <property name="checkable">
-                  <bool>true</bool>
-                 </property>
-                 <property name="autoExclusive">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item>
+               <item row="8" column="0">
                 <widget class="QPushButton" name="num15PB">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -792,8 +791,8 @@
                  </property>
                 </widget>
                </item>
-               <item>
-                <widget class="QPushButton" name="num13PB">
+               <item row="4" column="0">
+                <widget class="QPushButton" name="num7PB">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                    <horstretch>0</horstretch>
@@ -801,7 +800,83 @@
                   </sizepolicy>
                  </property>
                  <property name="text">
-                  <string>13</string>
+                  <string>7</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="num6PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>6</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="num3PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>3</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="0">
+                <widget class="QPushButton" name="num19PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>19</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                 <property name="autoExclusive">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1">
+                <widget class="QPushButton" name="num20PB">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="text">
+                  <string>20</string>
                  </property>
                  <property name="checkable">
                   <bool>true</bool>
@@ -930,8 +1005,8 @@
    <slot>runJavaScript()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>923</x>
-     <y>703</y>
+     <x>612</x>
+     <y>770</y>
     </hint>
     <hint type="destinationlabel">
      <x>700</x>
@@ -946,8 +1021,8 @@
    <slot>javaScriptChanged()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>630</x>
-     <y>831</y>
+     <x>613</x>
+     <y>848</y>
     </hint>
     <hint type="destinationlabel">
      <x>698</x>
@@ -962,8 +1037,8 @@
    <slot>play()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>173</x>
-     <y>297</y>
+     <x>202</x>
+     <y>290</y>
     </hint>
     <hint type="destinationlabel">
      <x>8</x>
@@ -994,8 +1069,8 @@
    <slot>urlChanged(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>911</x>
-     <y>629</y>
+     <x>600</x>
+     <y>697</y>
     </hint>
     <hint type="destinationlabel">
      <x>703</x>
@@ -1010,8 +1085,8 @@
    <slot>toggleJsConsole()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>173</x>
-     <y>446</y>
+     <x>202</x>
+     <y>413</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1026,8 +1101,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>745</x>
-     <y>145</y>
+     <x>420</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>628</x>
@@ -1042,8 +1117,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>185</y>
+     <x>590</x>
+     <y>171</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -1058,8 +1133,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>745</x>
-     <y>265</y>
+     <x>590</x>
+     <y>225</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -1074,8 +1149,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>305</y>
+     <x>420</x>
+     <y>278</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -1090,8 +1165,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>345</y>
+     <x>590</x>
+     <y>278</y>
     </hint>
     <hint type="destinationlabel">
      <x>741</x>
@@ -1106,8 +1181,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>745</x>
-     <y>385</y>
+     <x>420</x>
+     <y>331</y>
     </hint>
     <hint type="destinationlabel">
      <x>738</x>
@@ -1122,8 +1197,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>425</y>
+     <x>590</x>
+     <y>331</y>
     </hint>
     <hint type="destinationlabel">
      <x>739</x>
@@ -1138,8 +1213,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>465</y>
+     <x>420</x>
+     <y>384</y>
     </hint>
     <hint type="destinationlabel">
      <x>740</x>
@@ -1154,28 +1229,12 @@
    <slot>setCustomStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>911</x>
-     <y>592</y>
+     <x>590</x>
+     <y>118</y>
     </hint>
     <hint type="destinationlabel">
      <x>738</x>
      <y>342</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>aboutQtPB</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>MainWidget</receiver>
-   <slot>aboutQtInfo()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>149</x>
-     <y>486</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>5</x>
-     <y>297</y>
     </hint>
    </hints>
   </connection>
@@ -1186,7 +1245,7 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
+     <x>420</x>
      <y>225</y>
     </hint>
     <hint type="destinationlabel">
@@ -1202,8 +1261,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>836</x>
-     <y>505</y>
+     <x>590</x>
+     <y>384</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1218,8 +1277,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>545</y>
+     <x>420</x>
+     <y>437</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1234,8 +1293,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>705</y>
+     <x>420</x>
+     <y>490</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1250,8 +1309,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>585</y>
+     <x>590</x>
+     <y>437</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1266,8 +1325,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>625</y>
+     <x>590</x>
+     <y>490</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1282,8 +1341,8 @@
    <slot>setPresetStation()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>884</x>
-     <y>665</y>
+     <x>420</x>
+     <y>544</y>
     </hint>
     <hint type="destinationlabel">
      <x>790</x>
@@ -1298,8 +1357,8 @@
    <slot>setUIStyle()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>148</x>
-     <y>551</y>
+     <x>187</x>
+     <y>530</y>
     </hint>
     <hint type="destinationlabel">
      <x>5</x>
@@ -1314,8 +1373,8 @@
    <slot>setUIStyle()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>341</x>
-     <y>551</y>
+     <x>208</x>
+     <y>566</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -1346,12 +1405,108 @@
    <slot>setPlatform()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>270</x>
-     <y>581</y>
+     <x>208</x>
+     <y>690</y>
     </hint>
     <hint type="destinationlabel">
      <x>-1</x>
      <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>aboutQtPB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>aboutQtInfo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>106</x>
+     <y>434</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num16PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>512</x>
+     <y>525</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>631</x>
+     <y>524</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num17PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>340</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>627</x>
+     <y>577</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num18PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>585</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>630</x>
+     <y>618</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num19PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>373</x>
+     <y>634</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>630</x>
+     <y>668</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>num20PB</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWidget</receiver>
+   <slot>setPresetStation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>462</x>
+     <y>627</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>629</x>
+     <y>712</y>
     </hint>
    </hints>
   </connection>
@@ -1370,9 +1525,10 @@
   <slot>aboutQtInfo()</slot>
   <slot>setUIStyle()</slot>
   <slot>setPlatform()</slot>
+  <slot>setStationList(int)</slot>
  </slots>
  <buttongroups>
-  <buttongroup name="buttonGroup_2"/>
   <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
  </buttongroups>
 </ui>

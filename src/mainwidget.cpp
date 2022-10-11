@@ -8,15 +8,15 @@
 #include "stations.h"
 
 MainWidget::MainWidget(QWidget *parent)
-    : QWidget(parent), ui(new Ui::MainWidget)
-{
+    : QWidget(parent), ui(new Ui::MainWidget) {
 
     ui->setupUi(this);
 
     m_stationButtons = {
         ui->num1PB, ui->num2PB, ui->num3PB, ui->num4PB, ui->num5PB,
         ui->num6PB, ui->num7PB, ui->num8PB, ui->num9PB, ui->num10PB,
-        ui->num11PB, ui->num12PB, ui->num13PB, ui->num14PB, ui->num15PB
+        ui->num11PB, ui->num12PB, ui->num13PB, ui->num14PB, ui->num15PB,
+        ui->num16PB, ui->num17PB, ui->num18PB, ui->num19PB, ui->num20PB
     };
 
     ui->jsConsoleGB->setVisible(ui->jsConsolePB->isChecked());
@@ -35,6 +35,7 @@ MainWidget::MainWidget(QWidget *parent)
     m_stationButtons[0]->click();
 
     setPlatform();
+    toggleJsConsole();
 }
 
 MainWidget::~MainWidget() {
