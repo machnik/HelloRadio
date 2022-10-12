@@ -24,7 +24,7 @@ std::map<QString, std::tuple<QString, QString, int>> stations {
     {"CINEMIX", {"https://kathy.torontocast.com:1825/stream", "MP3", 128}},
     {"ABC Lounge", {"https://listen.openstream.co/4457/audio", "MP3", 128}},
     {"Latina Radio", {"https://start-latina.ice.infomaniak.ch/start-latina-high.mp3", "MP3", 192}},
-    {"Megaton Cafe", {"http://us2.internet-radio.com:8443/;stream", "MP3", 128}},
+    {"Open FM Film", {"https://stream.open.fm/38", "AAC", 48}},
     {"TOK FM", {"https://radiostream.pl/tuba10-1.mp3", "MP3", 128}}
 };
 

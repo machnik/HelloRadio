@@ -127,11 +127,11 @@ void MainWidget::setPlatform() {
     int iconSize {96};
 
     if (ui->pcPB->isChecked()) {
-        setStyleSheet("QWidget {font-size: 16px};");
+        setStyleSheet("QWidget {font-size: 17px};");
     }
     else {
-        setStyleSheet("QWidget {font-size: 12px};");
-        iconSize = 48;
+        setStyleSheet("QWidget {font-size: 11px};");
+        iconSize = 44;
     }
 
     ui->playPB->setIconSize({iconSize, iconSize});
